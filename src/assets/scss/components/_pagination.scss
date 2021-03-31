@@ -1,0 +1,27 @@
+.pagination {
+
+    .current {
+
+    }
+
+    .btn-page {
+        @include font-size(36);
+        color: white;
+        padding: 10px;
+        vertical-align: -3px;
+        transform: scale(1);
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.25);
+        }
+
+        &--prev {
+            margin-right: 15px;
+        }
+
+        &--next {
+            margin-left: 15px;
+        }
+    }
+}

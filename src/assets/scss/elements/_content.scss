@@ -1,0 +1,25 @@
+/* content */
+
+.content {
+    width: 76%;
+    min-width: calc(100vw - 340px);
+    padding-left: 10px;
+    background-color: var(--white);
+
+    @include laptop {
+        width: 100vw;
+        min-width: 100vw;
+        padding: 0;
+    }
+    &__container {
+        width: calc(100% - 40px);
+        margin: 50px auto 0 auto;
+        background-color: var(--light-gray);
+        border-radius: 10px;
+
+        @include tablet {
+            width: calc(100% - 20px);
+            margin: 30px auto 0 auto;
+        }
+    }
+}

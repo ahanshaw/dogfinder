@@ -1,0 +1,48 @@
+/* general */
+
+html {
+    font-size: 18px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    @include font-reg;
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    @include font-head;
+    @include font-size(52);
+    letter-spacing: 2px;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .city {
+        @include font-bold;
+    }
+}
+
+h2 {
+    @include font-head;
+}
+
+.wrapper {
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}

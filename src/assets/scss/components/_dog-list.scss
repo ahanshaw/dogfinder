@@ -1,0 +1,9 @@
+.dog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px -25px 0 -25px;
+
+    @include mobile {
+        margin: 25px 0;
+    }
+}
