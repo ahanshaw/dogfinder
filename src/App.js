@@ -20,6 +20,9 @@ function App() {
                 <Route path="/:organizationId/:dogId">
                     <DogDetail />
                 </Route>
+                <Route path="/:page">
+                    <DogList />
+                </Route>
                 <Route path="/">
                     <DogList />
                 </Route>
