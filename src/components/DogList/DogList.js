@@ -49,7 +49,6 @@ export function DogList() {
             return resp.json();
         })
         .then(function (data) {
-            console.log('dogs ', data.animals);
             setDogs(data.animals);
             setTotalPages(data.pagination.total_pages);
             setLoading(false);
