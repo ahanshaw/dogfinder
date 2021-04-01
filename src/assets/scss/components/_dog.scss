@@ -13,6 +13,15 @@
         flex: 0 0 100%
     }
 
+    &:hover {
+
+        h2 {
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+
     &__photo {
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -29,6 +38,7 @@
     }
 
     &__info {
+        min-height: 90px;
         padding: 0 10px 10px 10px;
 
         &__name {
@@ -37,6 +47,16 @@
                 @include font-size(30);
                 @include line-height(32, 36);
                 margin: 0 0 10px 0;
+
+                svg {
+                    display: inline-block;
+                    width: auto;
+                    height: 20px;
+                    fill: black;
+                    margin-left: 10px;
+                    opacity: 0;
+                    transition: opacity .3s ease;
+                }
             }
         }
 

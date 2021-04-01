@@ -30,6 +30,16 @@ h1 {
     a {
         color: white;
         text-decoration: none;
+
+        svg {
+            display: inline-block;
+            width: auto;
+            height: 60px;
+            fill: white;
+            margin-right: 10px;
+            vertical-align: -10px;
+            transform: rotate(-15deg);
+        }
     }
 
     .city {
@@ -46,4 +56,12 @@ h2 {
     width: calc(100% - 100px);
     max-width: 1200px;
     margin: 0 auto 50px auto;
+
+    @include tablet {
+        width: calc(100% - 50px);
+    }
+
+    @include mobile {
+        width: calc(100% - 20px);
+    }
 }
