@@ -21,32 +21,6 @@ body {
     background-color: black;
 }
 
-h1 {
-    @include font-head;
-    @include font-size(52);
-    letter-spacing: 2px;
-
-    a {
-        color: white;
-        text-decoration: none;
-
-        svg {
-            display: inline-block;
-            width: auto;
-            height: 60px;
-            fill: white;
-            margin-right: 10px;
-            vertical-align: -10px;
-            transform: rotate(-15deg);
-        }
-    }
-
-    .city {
-        @include font-med;
-        letter-spacing: 0;
-    }
-}
-
 h2 {
     @include font-head;
 }

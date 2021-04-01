@@ -1,0 +1,40 @@
+.header {
+
+    h1 {
+        @include font-head;
+        @include font-size(52);
+        @include line-height(52, 56);
+        letter-spacing: 2px;
+
+        @include mobile {
+            @include font-size(48);
+            @include line-height(48, 52);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            svg {
+                display: inline-block;
+                width: auto;
+                height: 60px;
+                fill: white;
+                margin-right: 10px;
+                vertical-align: -10px;
+                transform: rotate(-15deg);
+            }
+        }
+
+        .city {
+            @include font-med;
+            letter-spacing: 0;
+
+            @include mobile {
+                display: block;
+                @include font-size(42);
+                margin-left: 70px;
+            }
+        }
+    }
+}
