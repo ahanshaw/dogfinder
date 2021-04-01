@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 
+import { Loader } from "../Loader/Loader";
 import { Dog } from "../Dog/Dog";
 import { Pagination } from "../Pagination/Pagination";
 
@@ -64,9 +65,7 @@ export function DogList() {
 
     if (isLoading){
         return (
-            <div className="wrapper">
-                <p>Finding Your Pups ...</p>
-            </div>
+            <Loader />
         );
     }
 

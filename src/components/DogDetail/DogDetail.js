@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 import {useParams, Link} from 'react-router-dom';
 
+import { Loader } from "../Loader/Loader";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 
@@ -70,9 +72,7 @@ export function DogDetail() {
 
     if (isLoading){
         return (
-            <div className="wrapper">
-                <p>Loading ...</p>
-            </div>
+            <Loader />
         );
     }
 
