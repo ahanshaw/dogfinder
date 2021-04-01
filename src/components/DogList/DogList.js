@@ -38,7 +38,7 @@ export function DogList() {
             return resp.json();
         })
         .then(function (data) {
-            return fetch('https://api.petfinder.com/v2/animals?type=dog&limit=18&location=' + zip + '&distance=' + distance + '&page=' + page, {
+            return fetch('https://api.petfinder.com/v2/animals?type=dog&limit=12&location=' + zip + '&distance=' + distance + '&page=' + page, {
                 headers: {
                     'Authorization': data.token_type + ' ' + data.access_token,
                     'Content-Type': 'application/x-www-form-urlencoded'
