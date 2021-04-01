@@ -71,7 +71,7 @@ export function DogList() {
     }
 
     return (
-        <div className="wrapper">
+        <div>
             <div className="dog-list">
                 {dogs.map((dog) => {
                     return (
