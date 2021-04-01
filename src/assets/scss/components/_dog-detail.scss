@@ -17,6 +17,14 @@
             order: 2;
         }
 
+        .no-image {
+            display: block;
+            width: auto;
+            height: 70%;
+            fill: white;
+            margin: 15% auto;
+        }
+
         .single-image {
             width: 100%;
             aspect-ratio: 1 / 1;

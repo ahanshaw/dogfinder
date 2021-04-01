@@ -35,6 +35,14 @@
             object-fit: cover;
             object-position: center;
         }
+
+        .no-photo {
+            display: block;
+            width: auto;
+            height: 70%;
+            fill: white;
+            margin: 15% auto;
+        }
     }
 
     &__info {
