@@ -33,7 +33,8 @@ h1 {
     }
 
     .city {
-        @include font-bold;
+        @include font-med;
+        letter-spacing: 0;
     }
 }
 

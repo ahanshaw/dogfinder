@@ -1,8 +1,8 @@
-//import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 export function Dog({dog}){
     return (
-        <div className="dog">
+        <Link className="dog" to={`${dog.organization_id}/${dog.id}`}>
             <div className="dog__photo">
                 {dog.primary_photo_cropped.medium &&
                     <img src={dog.primary_photo_cropped.medium} alt={dog.name} />
@@ -20,6 +20,6 @@ export function Dog({dog}){
                     </p>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

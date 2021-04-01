@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Permanent+Marker&display=swap');
 
 @mixin font-head {
     font-family: 'Permanent Marker', cursive;
@@ -8,6 +8,11 @@
 @mixin font-reg {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
+}
+
+@mixin font-med {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
 }
 
 @mixin font-bold {
