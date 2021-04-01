@@ -46,12 +46,15 @@
             object-position: center;
         }
 
-        .no-photo {
+        svg.no-photo {
+            position: absolute;
+            top: 15%;
+            left: 50%;
             display: block;
             width: auto;
             height: 70%;
             fill: white;
-            margin: 15% auto;
+            transform: translateX(-50%);
         }
     }
 
