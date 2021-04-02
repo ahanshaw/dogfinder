@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import { useHistory, useParams } from "react-router-dom";
 
 import { Loader } from "../Loader/Loader";
 import { Dog } from "../Dog/Dog";
@@ -13,14 +14,31 @@ export function DogList() {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState();
 
+    const {pageNum} = useParams();
+    let history = useHistory();
+
+    // set URL params for first page
+    if (!pageNum) {
+        history.push('/' + page);
+    }
+
+    // match page param and page number
+    if (page !== pageNum) {
+        setPage(pageNum);
+    }
+
+    // update pages from pagination
     const nextPage = () => {
         setPage(page + 1);
+        history.push('/' + (parseInt(page) + 1));
     }
 
     const prevPage = () => {
         setPage(page - 1);
+        history.push('/' + (parseInt(page) - 1));
     }
 
+    // get dogs
     const getDogs = () => {
         const key = "NALA3V53iwbO5ojzf2Vxbi3NO21OP3H78iNOq7qhrr3wDDUtA7";
         const secret = "v1pMZO8xrk569hosPez56ZHsC4lXeFYG0wYiuGRm";
@@ -58,9 +76,11 @@ export function DogList() {
         });
     }
 
+    // update dogs on page change
     useEffect(() => {
         getDogs();
     }, [page]);
+
 
     if (isLoading){
         return (

@@ -20,7 +20,7 @@ function App() {
                 <Route path="/:organizationId/:dogId">
                     <DogDetail />
                 </Route>
-                <Route path="/:page">
+                <Route path="/:pageNum">
                     <DogList />
                 </Route>
                 <Route path="/">
