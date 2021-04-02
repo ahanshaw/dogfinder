@@ -18,8 +18,8 @@ export function DogList() {
     let history = useHistory();
 
     // set URL params for first page
-    if (!pageNum) {
-        history.push('/' + page);
+    if (pageNum == undefined) {
+        history.push('/1');
     }
 
     // match page param and page number
