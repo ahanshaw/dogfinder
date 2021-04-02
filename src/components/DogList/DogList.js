@@ -17,7 +17,7 @@ export function DogList() {
     const {pageNum} = useParams();
     let history = useHistory();
 
-    // match page param and page number
+    // match page param and page number to accommodate back btn
     if (page !== pageNum) {
         setPage(pageNum);
     }
