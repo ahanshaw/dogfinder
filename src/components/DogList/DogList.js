@@ -17,11 +17,6 @@ export function DogList() {
     const {pageNum} = useParams();
     let history = useHistory();
 
-    // set URL params for first page
-    if (pageNum == undefined) {
-        history.push('/1');
-    }
-
     // match page param and page number
     if (page !== pageNum) {
         setPage(pageNum);

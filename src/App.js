@@ -1,5 +1,6 @@
 import {
     BrowserRouter as Router,
+    Redirect,
     Switch,
     Route
 } from 'react-router-dom';
@@ -24,7 +25,7 @@ function App() {
                     <DogList />
                 </Route>
                 <Route path="/">
-                    <DogList />
+                    <Redirect to="/1" />
                 </Route>
             </Switch>
         </Router>
