@@ -28,6 +28,7 @@
 
         .city {
             @include font-med;
+            @include font-size(48);
             letter-spacing: 0;
 
             @include mobile {
