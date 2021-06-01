@@ -5,6 +5,7 @@
 
     @include laptop {
         flex-wrap: wrap;
+        align-items: flex-start;
     }
 
     @include mobile {
@@ -12,11 +13,14 @@
     }
 
     &__group {
-        margin-right: 25px;
+
+        @include laptop {
+            flex: 0 0 calc(50% - 25px);
+            margin-bottom: 25px;
+        }
 
         @include tablet {
             flex: 0 0 100%;
-            margin-bottom: 25px;
         }
 
         p {
@@ -50,14 +54,12 @@
     }
 
     &__submit {
+        margin-top: 25px;
 
         @include laptop {
-            flex: 0 0 100%;
-            margin-top: 25px;
-        }
-
-        @include tablet {
-            margin-top: 0;
+            flex: 0 0 calc(50% - 25px);
+            text-align: right;
+            margin: 0;
         }
 
         button[type="submit"] {

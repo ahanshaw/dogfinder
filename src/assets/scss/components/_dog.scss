@@ -1,5 +1,6 @@
 .dog {
     flex: 0 0 calc(33.33% - 50px);
+    max-width: calc(33.33% - 50px);
     margin: 0 25px 50px 25px;
     text-decoration: none;
     color: black;
@@ -7,10 +8,12 @@
 
     @include tablet {
         flex: 0 0 calc(50% - 50px);
+        max-width: calc(50% - 50px);
     }
 
     @include mobile {
         flex: 0 0 100%;
+        max-width: 100%;
         margin: 0 0 50px 0;
     }
 
@@ -46,7 +49,7 @@
             object-position: center;
         }
 
-        svg.no-photo {
+        svg {
             position: absolute;
             top: 15%;
             left: 50%;
@@ -68,6 +71,7 @@
                 @include font-size(30);
                 @include line-height(32, 36);
                 margin: 0 0 10px 0;
+                overflow-wrap: break-word;
 
                 svg {
                     display: inline-block;
@@ -86,6 +90,7 @@
             p {
                 @include font-size(15);
                 margin: 0;
+                overflow-wrap: break-word;
             }
         }
     }
